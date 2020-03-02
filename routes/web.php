@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/model', function() {
+    //$products  = \App\Product::all();
+
+    //$user = new \App\User();
+    $user = \App\User::find(1);
+    $user->name = 'Administrador';
+    /*$user->email = 'email@teste.com';
+    $user->password = bcrypt('12345678');*/
+
+    $user->save();
+
+    // return $products;
+    return \App\User::all();
+});
