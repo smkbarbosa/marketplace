@@ -39,6 +39,19 @@ Route::get('/model', function() {
 //        'email' => 'teste@smkbarbosa',
 //        'password' => bcrypt('teste')
 //    ]);
+    //Como pegaria a loja de um usuário
+
+//    $user = \App\User::find(4);
+//
+//    $user->stores; //1-1 - retorna o objeto  unico, se for n-n retorna o collection de dados (objeto)
+
+//    $loja = \App\Store::find(9);
+//    return $loja->products()->count();
+//    return $loja->products()->where('id', 9)->get();
+
+    // pegando as lojas de uma categoria
+//    $categoria = \App\Category::find(1);
+//    $categoria->products;
 
     return \App\User::all();
 });
