@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Criar Loja</h1>
+    <h1>Editar Loja</h1>
 
 
     <form action="/admin/stores/store" method="post">
