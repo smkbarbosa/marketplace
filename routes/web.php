@@ -34,11 +34,11 @@ Route::get('/model', function() {
 
     /* Mass Assignment - Atribuição em massa */
 
-    $user = \App\User::create([
-        'name' => 'Samuel Barbosa',
-        'email' => 'teste@smkbarbosa',
-        'password' => bcrypt('teste')
-    ]);
+//    $user = \App\User::create([
+//        'name' => 'Samuel Barbosa',
+//        'email' => 'teste@smkbarbosa',
+//        'password' => bcrypt('teste')
+//    ]);
 
     return \App\User::all();
 });

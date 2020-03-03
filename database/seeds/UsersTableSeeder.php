@@ -20,6 +20,11 @@ class UsersTableSeeder extends Seeder
 //                'remember_token' => 'akakdsdsdsdsdsd',
 //            ]
 //        );
-        factory(\App\User::class, 40)->create();
+
+        // Cria uma loja fake pra cada usuário fake criado.
+        factory(\App\User::class, 40)->create()->each(function($user){
+            // save -> trabalha com a classe | create -> array
+            $user->store()->save(factory(\App\Store::class)->make());
+        });
     }
 }
