@@ -95,3 +95,5 @@ Route::get('/model', function() {
     return \App\Product::find(1);
 });
 
+Route::get('/admin/stores', 'Admin\\StoreController@index');
+
