@@ -2,13 +2,14 @@
 
 
 <form action="/admin/stores/store" method="post">
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
     <div>
         <label for="name">Nome Loja </label>
         <input type="text" name="name">
     </div>
     <div>
         <label for="description">Descrição </label>
-        <input type="text" name="Description">
+        <input type="text" name="description">
     </div>
     <div>
         <label for="phone">Telefone</label>
